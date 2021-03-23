@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CheckOutActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Full Name"
+        android:id="@+id/fullname_tx"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="25sp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/user_fullname_card"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/fullname_tx"
+        android:elevation="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_fullname"
+            android:padding="10dp"
+          />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Phone"
+        android:id="@+id/phone_tx"
+        android:layout_below="@id/user_fullname_card"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="25sp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/user_phone_card"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/phone_tx"
+        android:elevation="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_phone"
+            android:padding="10dp"
+           />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Street Name"
+        android:layout_below="@id/user_phone_card"
+        android:id="@+id/streetname_tx"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="25sp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/user_street_card"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/streetname_tx"
+        android:elevation="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_street"
+        android:padding="10dp"
+       />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Building Number"
+        android:layout_below="@id/user_street_card"
+        android:id="@+id/buildingno_tx"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Floor Number"
+        android:layout_below="@id/user_street_card"
+        android:layout_toRightOf="@id/buildingno_tx"
+        android:id="@+id/floornumber_tx"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="20sp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/user_buildingno_card"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/buildingno_tx"
+        android:elevation="5dp">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_buildingNo"
+            android:padding="10dp"
+            android:gravity="center"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="80dp"
+        android:layout_toRightOf="@id/user_buildingno_card"
+        android:id="@+id/user_floor_card"
+        android:layout_below="@id/floornumber_tx"
+        android:elevation="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_floorNo"
+            android:padding="10dp"
+            android:gravity="center"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/user_address_notes_card"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/user_buildingno_card"
+        android:elevation="5dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@null"
+            android:hint="Write your notes about address or product"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/user_address_notes_card"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Products:"
+                android:textSize="20sp"
+                android:id="@+id/checkout_no_products"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Price"
+                android:textSize="20sp"
+                android:id="@+id/checkout_total_price"
+                android:layout_below="@id/checkout_no_products"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Price"
+                android:textSize="20sp"
+                android:id="@+id/checkout_deleviry_price"
+                android:layout_below="@id/checkout_total_price"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Cost"
+                android:textSize="20sp"
+                android:id="@+id/checkout_total_cost"
+                android:layout_below="@id/checkout_deleviry_price"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkout_noproductsresulttx"
+                android:textColor="#00c853"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:text="1 Products"/>
+
+            <TextView
+                android:id="@+id/checkout_totalprice_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkout_no_products"
+                android:layout_alignParentRight="true"
+                android:text="32.0 L.E"
+                android:textColor="#00c853"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkout_delivery_price_tx"
+                android:layout_below="@id/checkout_totalprice_tx"
+                android:textColor="#00c853"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:text="5.0 L.E"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkout_total_cost_tx"
+                android:layout_below="@id/checkout_delivery_price_tx"
+                android:textColor="#00c853"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:text="37.0 L.E"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+        <ProgressBar
+            android:id="@+id/check_out_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            />
+
+</RelativeLayout>
+
+</ScrollView>
