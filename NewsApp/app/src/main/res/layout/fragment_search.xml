@@ -3,13 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="searchnews"
-        android:layout_centerInParent="true" />
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/searchlayout"
+        android:weightSum="1">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:textColorHint="#000"
+            android:gravity="center"
+            android:textColor="#000"
+            android:background="#fff"
+            android:hint="Search News"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/searchicon"
+            android:background="#000"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchlayout"
+        android:layout_margin="10dp"
+        android:id="@+id/searchrecyclerview"
+        app:spanCount="1"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
 
 </RelativeLayout>
