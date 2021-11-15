@@ -6,14 +6,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.BreakingNewsFragment">
 
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mode_switcher"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/mode_switcher"
         android:layout_margin="10dp"
         android:id="@+id/breakingnewsrecyclerview"
         app:spanCount="1"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-
 </RelativeLayout>

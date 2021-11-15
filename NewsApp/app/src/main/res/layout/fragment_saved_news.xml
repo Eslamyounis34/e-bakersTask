@@ -15,4 +15,13 @@
         app:spanCount="1"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/nofavouritestextid"
+        android:text="No Saved News In Your List"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

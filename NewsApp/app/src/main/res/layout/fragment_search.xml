@@ -14,20 +14,22 @@
         android:id="@+id/searchlayout"
         android:weightSum="1">
         <EditText
+            android:id="@+id/searchnewsedittext"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="0.8"
-            android:textColorHint="#000"
+            android:background="@drawable/edittextbackground"
             android:gravity="center"
+            android:hint="Search News"
             android:textColor="#000"
-            android:background="#fff"
-            android:hint="Search News"/>
+            android:textColorHint="#000" />
         <ImageView
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="0.2"
-            android:src="@drawable/searchicon"
-            android:background="#000"
+            android:id="@+id/searcharticleimagebutton"
+            android:src="@drawable/dark_search_icon_24"
+            android:background="@drawable/searchiconbackground"
             android:padding="5dp"
             />
     </LinearLayout>
@@ -37,11 +39,20 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/searchlayout"
         android:layout_margin="10dp"
-        android:id="@+id/searchrecyclerview"
+        android:id="@+id/searcharticlesrecyclerview"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:spanCount="1"
         android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-
-
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Results"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:id="@+id/nodatafound"
+        android:textSize="18sp"
+        />
 
 </RelativeLayout>
